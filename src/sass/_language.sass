@@ -1,0 +1,84 @@
+.language-wrap
+  position: relative
+  width: 95px
+  height: 36px
+  cursor: pointer
+
+  &::after
+    position: absolute
+    content: ''
+    top: 50%
+    right: 3px
+    width: 8px
+    height: 5px
+    transform: translateY(-20%)
+    background-image: url("../img/ico-triangle.png")
+
+.language
+  position: absolute
+  top: 0
+  right: -10px
+  display: inline-flex
+  flex-direction: column
+  width: 60px
+  height: 35px
+  line-height: 35px
+  overflow: hidden
+  z-index: 10
+
+  &.is-open
+    height: auto
+    border-bottom: 1px solid #1E88E5
+
+    .language__el.is-active
+      border-color: #FFF
+
+  &__el
+    position: relative
+    border: 1px solid #1e88e5
+    color: #3c3f41
+    padding-left: 10px
+    display: flex
+    flex: 1
+    background-color: #FFFFFF
+    order: 2
+    min-height: 35px
+    text-transform: uppercase
+    border-top: none
+    border-bottom: none
+
+    &:first-child
+      border-top: 1px solid #1e88e5
+
+
+    &:hover
+      background-color: #f2f4f6
+
+      .language__link
+        color: #3c3f41
+
+    &.is-active
+      order: 1
+      border: 1px solid transparent
+      background-color: transparent
+
+      &:hover
+        border-color: #FFF
+
+      .language__link
+        color: #fff
+
+  &__link
+    color: #434A4C
+    transition: none
+
+    &:hover
+      color: #3c3f41
+      text-decoration: none
+
+  &__ico
+    position: absolute
+    top: 16px
+    right: 9px
+    z-index: 11
+

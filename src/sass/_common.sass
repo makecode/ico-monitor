@@ -1,0 +1,88 @@
+//variables
+$textBlack: #3c3f41
+$textGrey: #969b9f
+$bgBlue: #1e88e5
+$bgGrey: #3a444c
+$bgYellow: #ffee43
+$bgYellowDark: #ffd200
+
+=h400
+	font-family: 'Open Sans', sans-serif
+	font-weight: 400
+
+=h600
+	font-family: 'Open Sans', sans-serif
+	font-weight: 600
+
+=h700
+	font-family: 'Open Sans', sans-serif
+	font-weight: 700
+
+html
+	height: 100%
+
+body
+	font-size: 14px
+	line-height: 1.4
+	color: $textBlack
+	min-height: 100%
+	display: flex
+	flex-direction: column
+	+h400
+
+a
+	display: inline-flex
+	color: #1e88e5
+	transition: all .3s ease-in-out
+	text-decoration: none
+	cursor: pointer
+
+	&:hover
+		text-decoration: underline
+
+h1
+	font-size: 30px
+	letter-spacing: -.9px
+	+h700
+
+img
+	display: block
+	max-width: 100%
+	height: 100%
+
+.copyright
+	font-size: 13px
+	color: $bgGrey
+
+.banner
+	display: flex
+	justify-content: center
+	margin-bottom: 24px
+
+.i-bold
+	+h700
+
+h4
+	font-size: 22px
+	text-transform: uppercase
+
+.copyright
+	color: $textGrey
+	font-size: 13px
+	text-align: right
+
+.arrows
+	display: inline-block
+	position: relative
+	width: 10px
+	height: 10px
+	cursor: pointer
+	font-size: 11px
+
+	&__up
+		position: absolute
+		bottom: 2px
+
+	&__down
+		position: absolute
+		top: 3px

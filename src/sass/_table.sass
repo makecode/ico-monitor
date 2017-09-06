@@ -1,0 +1,88 @@
+.table
+  margin-top: 8px
+  margin-bottom: 30px
+  width: 100%
+
+  thead
+    text-align: left
+    background-color: #f2f4f6
+
+  th
+    position: relative
+    height: 35px
+    line-height: 35px
+    font-size: 14px
+    +h600
+
+    &.sorting,
+    &.sorting_desc,
+    &.sorting_asc
+      padding-left: 15px
+      cursor: pointer
+      user-select: none
+
+      &::after,
+      &::before
+        position: absolute
+        content: ''
+        left: 0
+        transform: translateY(-50%)
+        width: 0
+        height: 0
+        border-style: solid
+
+      &::after
+        top: calc(50% - 4px)
+        border-width: 0 3px 4px 3px
+        border-color: transparent transparent #4d5257 transparent
+
+      &::before
+        top: calc(50% + 4px)
+        border-width: 4px 3px 0 3px
+        border-color: #4d5257 transparent transparent transparent
+
+  td
+    padding-top: 10px
+    padding-bottom: 22px
+
+    &:first-child
+      width: 17%
+
+    &:nth-child(2)
+      width: 24%
+
+    &:nth-child(3)
+      width: 27%
+
+    &:nth-child(4)
+      width: 13%
+
+    &:nth-child(5)
+      width: 13%
+
+    &:nth-child(6)
+      width: 4%
+  tr
+    border-bottom: 1px solid #ebedf0
+
+  dt
+    margin-right: 4px
+    font-size: 14px
+    +h600
+
+  dl
+    font-size: 14px
+    display: flex
+
+.table-container
+  position: relative
+
+.table-wrap
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 36px
+  background-color: #f2f4f6
+  z-index: -1
+
